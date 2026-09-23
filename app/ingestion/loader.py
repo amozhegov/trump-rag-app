@@ -1,5 +1,3 @@
-# попробовать убрать polarity subjectivity из metadata
-
 import json
 from langchain_core.documents import Document
 

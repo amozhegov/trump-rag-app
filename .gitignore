@@ -39,4 +39,3 @@ Thumbs.db
 # Optional local data
 data/raw/
 *.sqlite3
-data/

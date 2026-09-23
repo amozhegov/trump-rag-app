@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 def _safe_save(**kwargs):
-    """Сохранить в Postgres; сбой БД только в лог."""
+    """Save to Postgres; log BD error"""
     db = SessionLocal()
     try:
         save_query(db, **kwargs)

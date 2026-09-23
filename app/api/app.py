@@ -1,9 +1,3 @@
-# from dir app:
-# uvicorn api.app:app --reload --host 0.0.0.0 --port 8000
-
-# from frontend:
-# npm run dev
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 

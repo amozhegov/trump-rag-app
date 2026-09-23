@@ -1,10 +1,10 @@
 from langchain_chroma import Chroma
-#new
+
 from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
 
 import time
-#end new
+
 
 def build_vectorstore(
     documents: list[Document],
@@ -12,7 +12,7 @@ def build_vectorstore(
     persist_directory: str,
     batch_size: int = 32,
 ):
-    print(f"Всего документов для индексации: {len(documents)}")
+    print(f"Total docs to index: {len(documents)}")
     
     vectorstore = Chroma(
         embedding_function=embeddings,
@@ -33,19 +33,11 @@ def build_vectorstore(
                 vectorstore.add_documents(batch)
                 break
             except Exception as e:
-                print(f"  Ошибка (попытка {attempt+1}/3): {e}")
+                print(f"Error (try {attempt+1}/3): {e}")
                 if attempt == 2:
                     raise
                 time.sleep(3)
 
-    print("Индексация завершена")
+    print("End of indexing")
     return vectorstore
 
-"""pip install langchain
-pip install langchain-ollama
-pip install langchain-chroma
-pip install chromadb
-
-И установить модель в Ollama:
-
-ollama pull nomic-embed-text"""

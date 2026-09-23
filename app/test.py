@@ -2,7 +2,7 @@ from langchain_chroma import Chroma
 from embedding.embedder import get_embeddings
 from config import CHROMA_PATH
 
-# Загружаем уже готовую базу
+# Load DB
 embeddings = get_embeddings()
 
 db = Chroma(
@@ -10,7 +10,7 @@ db = Chroma(
     embedding_function=embeddings,
 )
 
-print(f"Количество документов в Chroma: {db._collection.count()}")
+print(f"Number of docs in Chroma: {db._collection.count()}")
 
 # Берём один любой документ
 result = db._collection.get(limit=1)
