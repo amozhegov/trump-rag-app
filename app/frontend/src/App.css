@@ -1,0 +1,144 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #e8e8e8;
+  background: #0f1115;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #1a2234 0%, #0f1115 55%);
+  background-color: #0f1115;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  color: #e8e8e8;
+}
+
+.header p {
+  margin: 0 0 28px;
+  color: #9aa3b2;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #2a3344;
+  background: #171b24;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #5b8cff;
+}
+
+.search-box button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #5b8cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card {
+  text-align: left;
+  background: #171b24;
+  border: 1px solid #2a3344;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 0 auto 14px;
+  max-width: 800px;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9aa3b2;
+  margin-bottom: 10px;
+}
+
+.body-text,
+.summary-text {
+  margin: 0;
+  line-height: 1.55;
+  color: #d5d9e2;
+  white-space: pre-wrap;
+}
+
+.summary-text {
+  font-weight: 600;
+  color: #fff;
+}
+
+.status {
+  color: #9aa3b2;
+}
+
+.error {
+  border-color: #7a3030;
+  color: #ffb4b4;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.badge.positive {
+  background: #1e3d2f;
+  color: #7dffb0;
+}
+
+.badge.negative {
+  background: #3d1e1e;
+  color: #ff8f8f;
+}
